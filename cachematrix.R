@@ -1,14 +1,15 @@
-## This function defines four properties of a matrix including the set, get, setinverse and ## getinverse, and return them in a way of list 
+## This function defines four properties of a matrix including the set, get, setinverse and getinverse, 
+## and return them in a way of list 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL ##default value
-        set <- function(y) { ##set the value, only run when called by cache functions
+        set <- function(y) { ##store the input matrix in x, only run when called by cache functions
                 x <<- y
                 m <<- NULL
         }
-        get <- function() {x} ##get the value
-        setinverse <- function(inverse) {m <<- inverse} ## set the inverse value
-        getinverse <- function(){m}  ## get the inverse value
-        list(set = set, get = get,  ## list all thesse values
+        get <- function() {x} ##obtain the matrix
+        setinverse <- function(inverse) {m <<- inverse} ## set the inverse
+        getinverse <- function(){m}  ## get the inverse 
+        list(set = set, get = get,  ## list all these properties
              setinverse = setinverse,
              getinverse = getinverse)
 
