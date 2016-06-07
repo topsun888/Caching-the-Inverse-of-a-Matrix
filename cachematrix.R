@@ -15,7 +15,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 }
 
-
 ## This function calls makeCacheMatrix to return the inverse of the input matrix, if the i
 ## nverse is not cached calculate the inverse;otherwise, send a message and return the inverse 
 cacheSolve <- function(x, ...) {
